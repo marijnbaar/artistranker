@@ -16,3 +16,16 @@ export const deleteArtist = comingId => ({
   id: comingId,
 });
 
+export const incrementArtist = comingId => {
+  return {
+      type: "INCREMENT",
+      id: comingId,
+  }
+}
+
+export const decrementArtist = comingId => {
+  return {
+      type: "DECREMENT",
+      id: comingId
+  }
+}

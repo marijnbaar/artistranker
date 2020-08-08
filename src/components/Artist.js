@@ -13,7 +13,8 @@ export function Artist({ artists }) {
               key={artist.id}
               text={artist.text}
               id={artist.id}
-              completed={artist.completed} />
+              counter={artist.counter}
+            />
           ))
           : <p>Your list is empty.</p>}
       </ul>
