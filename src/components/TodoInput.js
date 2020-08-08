@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { addTodo } from '../actions/actions';
+import { addArtist } from '../actions/actions';
 
-export function TodoInput({ add }) {
+export function ArtistInput({ add }) {
   return (
     <div className="newTask">
       <p>Add a new task:</p>
@@ -19,8 +19,8 @@ export function TodoInput({ add }) {
   );
 }
 
-TodoInput.propTypes = {
+ArtistInput.propTypes = {
   add: PropTypes.func.isRequired,
 };
 
-export default connect(null, { add: addTodo })(TodoInput);
+export default connect(null, { add: addArtist })(ArtistInput);

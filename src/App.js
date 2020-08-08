@@ -1,8 +1,6 @@
 import React from 'react';
-import Greeting from './components/Greeting';
-import GreetingInput from './components/GreetingInput';
 import TodoInput from './components/TodoInput';
-import Todo from './components/Todo';
+import Todo from './components/Artist';
 import './App.css';
 
 function App() {
@@ -10,8 +8,7 @@ function App() {
         <div className="app">
             <header>
                 <p>Write your name</p>
-                <GreetingInput />
-                <Greeting />
+               
             </header>
          
                 <h2>This is your To Do List: </h2>

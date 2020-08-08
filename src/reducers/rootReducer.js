@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import greetingText from './greetingReducer';
-import todosReducer from './todosReducer';
+import artistsReducer from './artistsReducer';
 
 const rootReducer = combineReducers({
-  greetingText,
-  todoList: todosReducer,
+  artistList: artistsReducer,
 });
 
 export default rootReducer;

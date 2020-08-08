@@ -1,7 +1,3 @@
-export const setGreeting = greetingText => ({
-  type: 'SET_GREETING',
-  greetingText,
-});
 
 let id = 0;
 const incrementId = () => {
@@ -9,19 +5,14 @@ const incrementId = () => {
   return id;
 };
 
-export const addTodo = text => ({
-  type: 'ADD_TODO',
+export const addArtist = text => ({
+  type: 'ADD_ARTIST',
   id: incrementId(),
   text,
-  completed: false,
 });
 
-export const deleteTodo = comingId => ({
-  type: 'DELETE_TODO',
+export const deleteArtist = comingId => ({
+  type: 'DELETE_ARTIST',
   id: comingId,
 });
 
-export const toggleTodo = comingId => ({
-  type: 'TOGGLE_TODO',
-  id: comingId,
-});
