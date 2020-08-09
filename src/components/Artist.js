@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ListElement from './ListElement';
 
-export function Artist({ artists }) {
+export function Artist({ artists, count }) {
   return (
     <div className="artist-list">
       <ul>
@@ -13,7 +13,7 @@ export function Artist({ artists }) {
               key={artist.id}
               text={artist.text}
               id={artist.id}
-              counter={artist.counter}
+              count={count}
             />
           ))
           : <p>Your list is empty.</p>}
@@ -24,10 +24,12 @@ export function Artist({ artists }) {
 
 Artist.propTypes = {
   artists: PropTypes.arrayOf(PropTypes.object).isRequired,
+  count: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
   artists: state.artistList,
+  count: state.counter
 });
 
 export default connect(mapStateToProps)(Artist);

@@ -18,14 +18,22 @@ export const deleteArtist = comingId => ({
 
 export const incrementArtist = comingId => {
   return {
-      type: "INCREMENT",
-      id: comingId,
+      type: 'INCREMENT',
+      id: comingId
   }
 }
 
 export const decrementArtist = comingId => {
   return {
-      type: "DECREMENT",
+      type: 'DECREMENT',
       id: comingId
   }
 }
+
+// export const updateArtistScore = (index, score)  => {
+//   return {
+//     type: "UPDATE_ARTIST_SCORE",
+//     index,
+//     score
+//  };
+// };

@@ -6,14 +6,16 @@ const artistsReducer = (state = [], action) => {
         {
           id: action.id,
           text: action.text,
-          completed: false,
+          count: 0
         },
       ];
+    
  
     case 'DELETE_ARTIST':
       return state.filter(artist => artist.id !== action.id);
     default: return state;
   }
+  
 };
 
 export default artistsReducer;

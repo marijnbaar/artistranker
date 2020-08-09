@@ -1,6 +1,6 @@
 import React from 'react';
-import TodoInput from './components/TodoInput';
-import Todo from './components/Artist';
+import ArtistInput from './components/Artistinput';
+import Artist from './components/Artist';
 import './App.css';
 
 function App() {
@@ -11,10 +11,9 @@ function App() {
                
             </header>
          
-                <h2>This is your To Do List: </h2>
-                <TodoInput />
-                <Todo />
-            
+                <h2>This is your list with artists: </h2>
+                <ArtistInput />
+                <Artist />
         </div>
     );
 };

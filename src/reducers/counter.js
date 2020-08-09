@@ -1,20 +1,17 @@
-const initialState = {
-  count: 0
-};
+// const initialState = {
+//   count: 0
+// };
 
-const counter = (state = initialState, action) => {
+const counter = (state = 0, action) => {
   switch(action.type) {
     case 'INCREMENT':
-      return {
-        count: state.count + 1
-      };
+      return state + 1
     case 'DECREMENT':
-      return {
-        count: state.count - 1
-      };
+      return state - 1
     default:
       return state;
   }
 }
 
 export default counter;
+
