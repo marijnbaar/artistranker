@@ -6,12 +6,12 @@ import { addArtist } from '../actions/actions';
 export function ArtistInput({ add }) {
   return (
     <div className="newArtist">
-      <input id="listInput" />
+      <input id="listInput" placeholder="Add an artist"/>
       <button
         className="btn-1"
         type="submit"
         onClick={() => add(document.getElementById('listInput').value)}>
-        Add an Artist
+        add
       </button>
       <hr />
     </div>
