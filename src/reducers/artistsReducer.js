@@ -56,7 +56,7 @@ function artistIdReducer(state = false, action) {
 
 const rootReducer = combineReducers({
   artistList: artistsReducer,
-  artistPage: artistPageReducer,
+  artistPageShow: artistPageReducer,
   artistId: artistIdReducer,
 });
 

@@ -37,10 +37,9 @@ export const displayArtist = comingId => {
   }
 }
 
-export const closeArtist = comingId => {
+export const closeArtist = () => {
   return {
     type: 'CLOSE_ARTIST',
-      id: comingId,
   }
 }
 

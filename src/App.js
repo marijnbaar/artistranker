@@ -1,21 +1,47 @@
 import React from 'react';
 import ArtistInput from './components/Artistinput';
-import Artist from './components/Artist';
 import './App.css';
+import { useDispatch, useSelector } from 'react-redux';
+import ListElement from './components/ListElement';
+import Artistpage from './components/Artistpage';
+
 
 function App() {
-    return (
-        <div className="app">
-            <header>
-                <p>Time to rank!</p>
-               
-            </header>
-         
-                <h2>Your list with artists: </h2>
-                <ArtistInput />
-                <Artist />
+  const allArtists = useSelector(state => state.artistList);
+  const artistId = useSelector(state => state.artistId)
+  const displayArtist = useSelector(state => state.artistPageShow)
+
+  return (
+    <div className="app">
+      <header>
+        <p>Time to rank!</p>
+
+      </header>
+      <main>
+        <h2>Your list with artists: </h2>
+        <ArtistInput />
+        <div className="artist-list">
+          <ul>
+            {allArtists.length
+              ? allArtists.map(artist => (
+                <ListElement
+                  key={artist.id}
+                  text={artist.text}
+                  id={artist.id}
+                  count={artist.count}
+                />
+              ))
+              : <p>Your list is empty. Add an artist to the list and reward them with a star!</p>}
+          </ul>
         </div>
-    );
+        {displayArtist
+        ? <Artistpage artistId={artistId} />
+        : null }
+  
+      </main>
+      </div>
+
+  );
 };
 
 export default App;
