@@ -24,17 +24,19 @@ function Artistpage(artistId) {
       <h2>Artist information</h2>
       <p>{selectArtist}</p>
       <form className="artist-form" >
-        <label><p>Update Artist Name</p></label>
-        <input type="text" id="updateArtistName" placeholder="Enter name" />
-        <label><p>Update Artist Picture</p></label>
-        <input type="file" id="updateArtistPicture" placeholder="Upload a picture" />
+        <div className="artist-name-wrapper">
+          <label>Update Artist Name</label>
+          <input type="text" id="updateArtistName" placeholder="Enter name" />
+        </div>
+        <label>Update Artist Picture</label>
+        <input type="text" id="updateArtistPicture" placeholder="Upload a picture url" />
         <button type="button" className="btn-3" onClick={editArtist}>
-          Submit
+          submit
         </button>
       </form>
 
-      <button type="button" className="btn-2" onClick={closeArtistPage}>
-        <i className="fas fa-trash" />
+      <button type="button" className="btn-4" onClick={closeArtistPage}>
+        back
       </button>
     </div>
   )

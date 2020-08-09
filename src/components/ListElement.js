@@ -35,7 +35,9 @@ Artist.propTypes = {
   id: PropTypes.number.isRequired,
   dlt: PropTypes.func.isRequired,
   count: PropTypes.number.isRequired,
-  display: PropTypes.func.isRequired
+  display: PropTypes.func.isRequired,
+  increment: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired
 };
 
 
