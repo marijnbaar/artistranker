@@ -7,18 +7,18 @@ import { decrementArtist } from '../actions/actions';
 
 
 export function Artist({
-  text, id, dlt, count, update, decrement
+  text, id, dlt, count, increment, decrement
 }) {
 
   return (
     <div>
       <li className="artist-list">
-        <p>{text}{count}</p>
+        <p>{text}</p><p><i className='fas fa-star' />{count}</p>
         <button type="button" className="btn-3" onClick={() => decrement(id)}>
-          <i className='far fa-circle' />
+          <i className='fas fa-minus' />
         </button>
-        <button type="button" className="btn-3" onClick={() => update(id)} >
-          <i className='far fa-circle' />
+        <button type="button" className="btn-3" onClick={() => increment(id)} >
+          <i className='fas fa-plus' />
         </button>
         <button type="button" className="btn-2" onClick={() => dlt(id)}>
           <i className="fas fa-trash" />
@@ -39,4 +39,4 @@ Artist.propTypes = {
 };
 
 
-export default connect(null, { dlt: deleteArtist, update: incrementArtist, decrement: decrementArtist })(Artist);
+export default connect(null, { dlt: deleteArtist, increment: incrementArtist, decrement: decrementArtist })(Artist);

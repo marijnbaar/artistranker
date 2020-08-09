@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ListElement from './ListElement';
 
-export function Artist({ artists, count }) {
+export function Artist({ artists }) {
   return (
     <div className="artist-list">
       <ul>

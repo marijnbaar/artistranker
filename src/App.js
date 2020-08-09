@@ -7,11 +7,11 @@ function App() {
     return (
         <div className="app">
             <header>
-                <p>Write your name</p>
+                <p>Time to rank!</p>
                
             </header>
          
-                <h2>This is your list with artists: </h2>
+                <h2>Your list with artists: </h2>
                 <ArtistInput />
                 <Artist />
         </div>

@@ -1,3 +1,5 @@
+import { combineReducers } from 'redux';
+
 const artistsReducer = (state = [], action) => {
   switch (action.type) {
     case 'ADD_ARTIST':
@@ -23,12 +25,39 @@ const artistsReducer = (state = [], action) => {
         ? { ...artist, count: artist.count - 1 } 
         : artist
     ))
-      
+
     case 'DELETE_ARTIST':
       return state.filter(artist => artist.id !== action.id);
     default: return state;
   }
-  
 };
 
-export default artistsReducer;
+function artistPageReducer(state = false, action) {
+  switch (action.type) {
+    case 'DISPLAY_ARTIST':
+      return true;
+    case 'CLOSE_ARTIST':
+      return false;
+    default: 
+      return state;
+  }
+}
+
+function artistIdReducer(state = false, action) {
+  switch (action.type) {
+    case 'DISPLAY_ARTIST':
+      return action.id;
+    case 'CLOSE_ARTIST':
+      return false;
+    default: 
+      return state;
+  }
+}
+
+const rootReducer = combineReducers({
+  artistList: artistsReducer,
+  artistPage: artistPageReducer,
+  artistId: artistIdReducer,
+});
+
+export default rootReducer;

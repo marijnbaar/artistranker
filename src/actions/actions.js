@@ -29,3 +29,26 @@ export const decrementArtist = comingId => {
       id: comingId
   }
 }
+
+export const displayArtist = comingId => {
+  return {
+    type: 'DISPLAY_ARTIST',
+      id: comingId,
+  }
+}
+
+export const closeArtist = comingId => {
+  return {
+    type: 'CLOSE_ARTIST',
+      id: comingId,
+  }
+}
+
+export const updateArtist = (id, text, picture) => {
+  return {
+    type: 'UPDATE_ARTIST',
+    id, 
+    text,
+    picture
+  }
+}
