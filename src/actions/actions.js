@@ -1,5 +1,5 @@
+let id = 0;
 const incrementId = () => {
-  let id = 0;
   id += 1;
   return id;
 };

@@ -32,9 +32,9 @@ function Artistpage({ artistId }) {
           <label htmlFor="new-picture">
             <input type="text" id="updateArtistPicture" placeholder="Upload a picture url" />
           </label>
-        <button type="submit" className="btn-3">
-          submit
-        </button>
+          <button type="submit" className="btn-3">
+            submit
+          </button>
         </div>
       </form>
 

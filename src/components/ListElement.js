@@ -32,7 +32,7 @@ export function Artist({
           className="btn-3"
           onClick={() => {
             decrement(id);
-            sort();
+            sort(id);
           }}>
           <i className="fas fa-minus" />
         </button>
@@ -41,7 +41,7 @@ export function Artist({
           className="btn-3"
           onClick={() => {
             increment(id);
-            sort();
+            sort(id);
           }}>
           <i className="fas fa-plus" />
         </button>
