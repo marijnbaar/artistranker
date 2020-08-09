@@ -11,7 +11,7 @@ export function Artist({
     <div>
       <li className="artist-list">
         <p>{text}</p>
-        <button type="button" className="btn-3" onClick={display(id)}>show
+        <button type="button" className="btn-3" onClick={display.bind(null, id)}>show
         </button>
         <p><i className='fas fa-star' />{count}</p>
         <button type="button" className="btn-3" onClick={() => decrement(id)}>
@@ -34,11 +34,9 @@ Artist.propTypes = {
   text: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
   dlt: PropTypes.func.isRequired,
-  count: PropTypes.func.isRequired,
-  update: PropTypes.func.isRequired
+  count: PropTypes.number.isRequired,
+  display: PropTypes.func.isRequired
 };
-const mapStateToProps = state => ({
-  display: state.artistPageShow,
-});
 
-export default connect(mapStateToProps, { dlt: deleteArtist, increment: incrementArtist, decrement: decrementArtist, display: displayArtist })(Artist);
+
+export default connect(null, { dlt: deleteArtist, increment: incrementArtist, decrement: decrementArtist, display: displayArtist })(Artist);

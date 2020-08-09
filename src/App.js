@@ -1,7 +1,7 @@
 import React from 'react';
 import ArtistInput from './components/Artistinput';
 import './App.css';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import ListElement from './components/ListElement';
 import Artistpage from './components/Artistpage';
 

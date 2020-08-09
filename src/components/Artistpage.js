@@ -15,11 +15,12 @@ function Artistpage(artistId) {
   return (
     <div className="artist-page-wrapper">
       <h2>Artist information</h2>
-      <form className="artist-form" >
+      {/* <form className="artist-form" >
         
+     
 
       </form>
-      
+       */}
     </div>
   )
 
