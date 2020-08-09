@@ -13,7 +13,7 @@ export function Artist({ artists, count }) {
               key={artist.id}
               text={artist.text}
               id={artist.id}
-              count={count}
+              count={artist.count}
             />
           ))
           : <p>Your list is empty.</p>}
@@ -29,7 +29,6 @@ Artist.propTypes = {
 
 const mapStateToProps = state => ({
   artists: state.artistList,
-  count: state.counter
 });
 
 export default connect(mapStateToProps)(Artist);

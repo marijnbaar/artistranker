@@ -29,11 +29,3 @@ export const decrementArtist = comingId => {
       id: comingId
   }
 }
-
-// export const updateArtistScore = (index, score)  => {
-//   return {
-//     type: "UPDATE_ARTIST_SCORE",
-//     index,
-//     score
-//  };
-// };
