@@ -29,7 +29,7 @@ function App() {
                   text={artist.text}
                   id={artist.id}
                   count={artist.count}
-                  pic={artist.pic}
+                  picture={artist.picture}
                 />
               ))
               : <p>Your list is empty. Add an artist to the list and reward them with a star!</p>}

@@ -8,24 +8,33 @@ const artistsReducer = (state = [], action) => {
         {
           id: action.id,
           text: action.text,
-          count: 0
+          count: 0,
         },
       ];
-    
+    case 'UPDATE_ARTIST':
+      return state.map(artist => (
+        (artist.id === action.id)
+          ? {
+            ...artist,
+            picture: action.picture,
+            text: action.text,
+          }
+          : artist
+      ));
     case 'INCREMENT':
       return state.map(artist => (
-        (artist.id === action.id && artist.count < 5) 
-        ? { ...artist, count: artist.count + 1 } 
-        : artist
-    ))
-
+        (artist.id === action.id && artist.count < 5)
+          ? { ...artist, count: artist.count + 1 }
+          : artist
+      ));
     case 'DECREMENT':
       return state.map(artist => (
-        (artist.id === action.id && artist.count > 0) 
-        ? { ...artist, count: artist.count - 1 } 
-        : artist
-    ))
-
+        (artist.id === action.id && artist.count > 0)
+          ? { ...artist, count: artist.count - 1 }
+          : artist
+      ));
+    case 'SORT_ARTIST':
+      return [...state.sort((high, low) => ((high.count < low.count) ? 1 : -1))];
     case 'DELETE_ARTIST':
       return state.filter(artist => artist.id !== action.id);
     default: return state;
@@ -38,7 +47,7 @@ function artistPageReducer(state = false, action) {
       return true;
     case 'CLOSE_ARTIST':
       return false;
-    default: 
+    default:
       return state;
   }
 }
@@ -49,7 +58,7 @@ function artistIdReducer(state = false, action) {
       return action.id;
     case 'CLOSE_ARTIST':
       return false;
-    default: 
+    default:
       return state;
   }
 }

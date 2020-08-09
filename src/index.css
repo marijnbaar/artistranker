@@ -9,6 +9,12 @@ body {
   color: aliceblue;
 }
 
+.fit-picture {
+  height: 40px;
+  width: auto;
+  padding-right: 20px;
+}
+
 header {
   margin-top: 50px;
 }

@@ -3,10 +3,7 @@
         "browser": true,
         "es2020": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended"
-    ],
+    "extends": ["salt", "salt/react", "salt/react/hooks"],
     "parserOptions": {
         "ecmaFeatures": {
             "jsx": true
@@ -18,5 +15,10 @@
         "react"
     ],
     "rules": {
+      "react/jsx-closing-bracket-location": [
+        "error",
+        { "selfClosing": "after-props", "nonEmpty": "after-props" }
+      ],
+      "react/jsx-filename-extension": ["error", { "extensions": [".js"] }]
     }
 }

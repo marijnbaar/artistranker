@@ -6,11 +6,13 @@ import { addArtist } from '../actions/actions';
 export function ArtistInput({ add }) {
   return (
     <div className="newArtist">
-      <input id="listInput" placeholder="Add an artist"/>
+      <input id="listInput" placeholder="Add an artist" />
       <button
         className="btn-1"
         type="submit"
-        onClick={() => add(document.getElementById('listInput').value)}>
+        onClick={() => (document.getElementById('listInput').value
+          ? add(document.getElementById('listInput').value)
+          : null)}>
         add
       </button>
       <hr />

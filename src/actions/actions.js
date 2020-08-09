@@ -1,6 +1,5 @@
-
-let id = 0;
 const incrementId = () => {
+  let id = 0;
   id += 1;
   return id;
 };
@@ -16,38 +15,33 @@ export const deleteArtist = comingId => ({
   id: comingId,
 });
 
-export const incrementArtist = comingId => {
-  return {
-      type: 'INCREMENT',
-      id: comingId
-  }
-}
+export const incrementArtist = comingId => ({
+  type: 'INCREMENT',
+  id: comingId,
+});
 
-export const decrementArtist = comingId => {
-  return {
-      type: 'DECREMENT',
-      id: comingId
-  }
-}
+export const decrementArtist = comingId => ({
+  type: 'DECREMENT',
+  id: comingId,
+});
 
-export const displayArtist = comingId => {
-  return {
-    type: 'DISPLAY_ARTIST',
-      id: comingId,
-  }
-}
+export const displayArtist = comingId => ({
+  type: 'DISPLAY_ARTIST',
+  id: comingId,
+});
 
-export const closeArtist = () => {
-  return {
-    type: 'CLOSE_ARTIST',
-  }
-}
+export const sortArtist = comingId => ({
+  type: 'SORT_ARTIST',
+  id: comingId,
+});
 
-export const updateArtist = (id, text, picture) => {
-  return {
-    type: 'UPDATE_ARTIST',
-    id, 
-    text,
-    picture
-  }
-}
+export const closeArtist = () => ({
+  type: 'CLOSE_ARTIST',
+});
+
+export const updateArtist = (id, text, picture) => ({
+  type: 'UPDATE_ARTIST',
+  id,
+  text,
+  picture,
+});
