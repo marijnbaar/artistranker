@@ -1,6 +1,8 @@
 # Artist ranker
 In this test we are going to build a way for you to rank your favorite artists.
 
+![Preview](./previewranker.gif)
+
 # The task
 The app should support the following features:
 
