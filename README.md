@@ -1,55 +1,44 @@
-# Building a To Do list with React and Redux
+# Artist ranker
+In this test we are going to build a way for you to rank your favorite artists.
 
-Your task is to create a simple to do list app written in React with Redux as a state store.
+# The task
+The app should support the following features:
 
+# Add artist
 
-You can structure your app however you like but try to include all the basic requirements below. 
+Provide a textfield for artist name and a button to add the artist
+Validate that name is not empty
+Store the artist in the application state
+Artist Ranking List
 
+ - Sort the list of artists, in the number of stars (if two artists are on the same number of stars any order will be ok - no need to write code for that)
+ - For each artist, show the artist name + picture if present (this is updated from the artist  page, see below)
+ - For each artist, proivde a +-button to add stars to your artist
+ - For each artist, --button to remove start from your artist
+ - For each artist, provide a star-count, showing the number of stars given to the list
 
-At the moment, we have set this app for you with basic scripts, Redux and Redux dev tools.
+# Artist Page
 
+ - When clicking on the artist name, the Artist Ranking List navigate to the Artist Page
+ - The user should be able to update the name
+ - The user should be able to add an URL to a picture of the artist
+ - A Save-button should store the information in the application state
+ - Provide a route directly to the artist
+ - Provide a link back to the Artist Ranking List
 
- We have implemented some logic to change the Greeting when you type in your name. This is just to show you some code examples of using Redux in React. Study the code before you start the task and make sure you understand how it works. You may keep the greeting input if you want, or remove it, it's up to you.
+# Additional requirements and clarifications
+* The state of the app should only be local in the browser for one user, hence no backend is needed (nor any WebSockets)
+* You should use more than one component
+* Keep the state in the App-component
+* Make sure the application works by running npm install && npm start
+* Make sure that you don't have linting or test errors left in the code
+* The purpose of the test is not styling, and we leave it up to you to decide how much styling is needed to make the app useful.
 
-# Installation :wrench:
+# How will we evaluate this test
+* We will do a functional verification of the ranking app
+* We will run linting and tests that are present in the code and expected them to yield 0 errors
+* We will take a look at the code and application structure and expect that you have used components, props, context and state as we have talked about during the week.
 
-```sh
-$ npm install
-$ npm start
-```
+# Handing in the solution
+Upload your entire solution (except node_modules) in a folder called reactArtistRanker.
 
-Then open http://localhost:3000/ to see your app. :rocket:
-<br>
-The page will reload automatically if you make edits.
-
-
-To run tests:
-
-```sh
-$ npm test
-```
-##### You can now start building your first React component in ```app.js``` :thumbsup:
-
-# Basic requirements of the app :memo:
-  - Add a new todo to your todo-list
-  - Edit a todo
-  - Remove a todo from the list
-  - Mark a todo as "done"
-
-# Optional features: 
-  - Filter todos by status
-  - Set a due date for a todo
-  - Create todo categories
-
-# Technical Requirements
-  - Use Redux as your state container
-  - You may use either Class Components or Function components, it's up to you to decide.
-  - Write further tests for the components
-  - Write tests for the actions
-  - Write tests for the reducers
-
-# Useful Links :link:
-* [React documentation](https://facebook.github.io/react/) 
-* [Redux documentation](http://redux.js.org/) 
-* [Facebook React tutorial](https://facebook.github.io/react/tutorial/tutorial.html) 
-* [More React tutorials](http://buildwithreact.com/) 
